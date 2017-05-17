@@ -1,0 +1,5 @@
+Object,Name,Shape,Type,Rank,Group,IP,
+ClusterNode,dc1sqlcls01,doublecircle,clusdc1,1,,10.0.2.10,
+ClusterNode,dc1sqlcls02,doublecircle,clusdc1,1,,10.0.2.20,
+,,,,,,,
+Object,FromType,ToType,Label,Color,Style,Legend,Direction

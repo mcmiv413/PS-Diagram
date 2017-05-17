@@ -1,0 +1,14 @@
+Object,Name,Shape,Color,Style,Type,Rank,Group,CPU-l,MEM-uic,HDD-b,OS-n,IP,Vlan
+Node,https,egg,,,external,1,,,,,,,
+Node,lbweb,diamond,yellow3,,f5,2,,,,,,,
+Node,dc1web01,rectangle,,dashed,web,3,,2,4,40,windows,127.0.0.1,vlan1
+Node,dc1web02,box3d,,,web,3,,2,4,40,windows,127.0.0.2,vlan1
+Node,dc1app01,rectangle,orange,"rounded,filled",app,4,,2,4,40,windows,127.0.1.1,vlan2
+Node,dc1app02,rectangle,green,bold,app,4,,2,4,40,windows,127.0.1.2,vlan2
+Node,dc1mdb01,doublecircle,lightblue,filled,mdb,5,,4,8,80,windows,127.0.2.1,vlan3
+,,,,,,,,,,,,,
+Object,FromType,ToType,Label,Color,Style,Legend,Direction,,,,,,
+Route,external,f5,443,black,bold,https,,,,,,,
+Route,f5,web,443,black,bold,https,,,,,,,
+Route,web,app,80,blue,bold,http,both,,,,,,
+Route,app,mdb,3306,red,bold,mysql,,,,,,,

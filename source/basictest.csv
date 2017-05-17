@@ -1,0 +1,14 @@
+Object,Name,Shape,Color,Style,Type,Rank,Group
+Node,https,,,,external,1,
+Node,lbweb,,,,f5,2,
+Node,dc1web01,,,,web,3,
+Node,dc1web02,,,,web,3,
+Node,dc1app01,,,,app,4,
+Node,dc1app02,,,,app,4,
+Node,dc1mdb01,,,,mdb,5,
+,,,,,,,
+Object,FromType,ToType,Label,Color,Style,Legend,Direction
+Route,external,f5,,,,,
+Route,f5,web,,,,,
+Route,web,app,,,,,both
+Route,app,mdb,,,,,

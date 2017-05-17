@@ -1,0 +1,4 @@
+Object,Name,Shape,Type,Rank,Group,IP,Note
+Node,dc1ins03,rectangle,ins3,1,,10.0.2.16,G:\ MountPoint03
+,,,,,,,
+Object,FromType,ToType,Label,Color,Style,Legend,Direction

@@ -1,0 +1,9 @@
+Object,Name,Shape,Type,Rank,Group,CPU,MEM,OS,IP
+ClusterNode,dc1sql40,rectangle,db1,1,,4,20,windows,10.0.2.21
+ClusterNode,dc1sql50,rectangle,db2,2,,4,20,windows,10.0.2.22
+ClusterNode,dc1sql60,rectangle,db3,2,,4,20,windows,10.0.2.23
+,,,,,,,,,
+Object,FromType,ToType,Label,Color,Style,Legend,Direction,,
+Route,db1,db2,,black,bold,,both,,
+Route,db1,db3,,black,bold,,both,,
+Route,db2,db3,,black,bold,,both,,

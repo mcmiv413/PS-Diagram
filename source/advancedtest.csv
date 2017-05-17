@@ -1,0 +1,59 @@
+Object,Name,Shape,Type,Rank,Group,CPU,MEM,HDD,OS,IP,Vlan,Note
+Node,CRM,egg,crm,1,,,,,,,,
+Node,HTTPS,egg,external,1,,,,,,,,
+Node,dc2lbcrm,diamond,2lbcrm,2,,,,,,,EXT,
+Node,dc2lbmyb,diamond,2lbau2,2,,,,,,,EXT,
+Node,dc2lbsab,diamond,2lbaut,2,,,,,,,EXT,
+Node,dc1lbweb,diamond,1lbweb,2,,,,,,,EXT,
+Node,dc3lbweb,diamond,3lbweb,2,,,,,,,EXT,
+Node,dc2adm01,rectangle,2adm,3,0,2,4,20,CentOS 7,,WDMZ,Admin
+Node,dc1app0[1-2],rectangle,1app,3,1,4,8,30,CentOS 7,,WDMZ,Application
+Node,dc2au201,rectangle,2au2,3,0,2,4,20,CentOS 7,,WDMZ,AuthenticationV2
+Node,dc2aut01,rectangle,2aut,3,0,2,8,20,CentOS 7,,WDMZ,Authentication
+Node,dc1prc01,folder,1prc,4,1,2,4,40,Windows 2012,,IAPP,Process
+Node,dc1job0[1-2],rectangle,1job,4,1,4,8,20,CentOS 7,,IAPP,Jobs
+Node,dc1sql01,doublecircle,1sql,5,1,4,8,80,CentOS 7,,DATA,MYSQL DB
+Node,dc1nfs01,folder,1nfs,5,1,2,8,80,CentOS 7,,DATA,NFS Share
+Node,dc1rds01,rectangle,1rds,5,1,2,4,20,CentOS 7,,DATA,Redis
+Node,dc3app0[1-2],rectangle,3app,3,2,4,8,30,CentOS 7,,WDMZ,Application
+Node,dc3prc01,folder,3prc,4,2,2,4,40,Windows 2012,,IAPP,Process
+Node,dc3job0[1-2],rectangle,3job,4,2,4,8,20,CentOS 7,,IAPP,Jobs
+Node,dc3sql01,doublecircle,3sql,5,2,4,8,80,CentOS 7,,DATA,MYSQL DB
+Node,dc3nfs01,folder,3nfs,5,2,2,8,80,CentOS 7,,DATA,NFS Share
+Node,dc3rds01,rectangle,3rds,5,2,2,4,20,CentOS 7,,DATA,Redis
+,,,,,,,,,,,,
+Object,FromType,ToType,Label,Color,Style,Legend,Direction,,,,,
+Route,2adm,1sql,3306,red,bold,MYSQL,,,,,,
+Route,1app,1prc,"139,445",blue,bold,CIFS,,,,,,
+Route,1app,1nfs,"TCP & UDP 
+111,2049",green,bold,NFS,,,,,,
+Route,1app,1rds,6379,purple,bold,REDIS,,,,,,
+Route,1app,1sql,3306,red,bold,MYSQL,,,,,,
+Route,crm,2lbcrm,443,black,bold,HTTPS,,,,,,
+Route,external,2lbau2,443,black,bold,HTTPS,,,,,,
+Route,external,2lbaut,443,black,bold,HTTPS,,,,,,
+Route,external,1lbweb,443,black,bold,HTTPS,,,,,,
+Route,2lbcrm,2adm,443,black,bold,HTTPS,,,,,,
+Route,2lbau2,2au2,443,black,bold,HTTPS,,,,,,
+Route,2lbaut,2aut,443,black,bold,HTTPS,,,,,,
+Route,1lbweb,1app,443,black,bold,HTTPS,,,,,,
+Route,2au2,1lbweb,443,black,bold,HTTPS,,,,,,
+Route,1job,1prc,"139,445",blue,bold,CIFS,,,,,,
+Route,1job,1nfs,"TCP & UDP
+111,2049",green,bold,NFS,,,,,,
+Route,1job,1rds,6379,purple,bold,REDIS,,,,,,
+Route,1job,1sql,3306,red,bold,MYSQL,,,,,,
+Route,2adm,3sql,3306,red,bold,MYSQL,,,,,,
+Route,3app,3prc,"139,445",blue,bold,CIFS,,,,,,
+Route,3app,3nfs,"TCP & UDP 
+111,2049",green,bold,NFS,,,,,,
+Route,3app,3rds,6379,purple,bold,REDIS,,,,,,
+Route,3app,3sql,3306,red,bold,MYSQL,,,,,,
+Route,external,3lbweb,443,black,bold,HTTPS,,,,,,
+Route,3lbweb,3app,443,black,bold,HTTPS,,,,,,
+Route,2au2,3lbweb,443,black,bold,HTTPS,,,,,,
+Route,3job,3prc,"139,445",blue,bold,CIFS,,,,,,
+Route,3job,3nfs,"TCP & UDP
+111,2049",green,bold,NFS,,,,,,
+Route,3job,3rds,6379,purple,bold,REDIS,,,,,,
+Route,3job,3sql,3306,red,bold,MYSQL,,,,,,
