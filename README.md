@@ -14,7 +14,7 @@ Guide to using the module for generating application/server diagrams from csv fi
 
 ## This module has a few requirements:
 1. Clone the repo: [https://github.com/mcmiv413/PS-Diagram](https://github.com/mcmiv413/PS-Diagram)
-2. Graphviz: [Download Graphviz](http://www.graphviz.org/Download_windows.php)
+2. Graphviz: [Download Graphviz](http://www.graphviz.org/download/)
 3. PSGraph: From powershell **admin** prompt - `Find-Module PSGraph | Install-Module`
     - [PSGraph Github](https://github.com/KevinMarquette/PSGraph)
 
